@@ -1,0 +1,161 @@
+---
+title: Launch via Web Interface
+description: Full control over your token with the web launch wizard
+---
+
+# Web Interface Launch
+
+The web interface gives you complete control over your token's appearance and settings. Perfect for branded launches and custom projects.
+
+## Getting Started
+
+<Steps>
+  <Step title="Visit Slinq">
+    Go to [slinq.xyz](https://slinq.xyz) in your browser.
+  </Step>
+  <Step title="Connect your wallet">
+    Click "Connect Wallet" and choose your preferred wallet or sign-in method.
+  </Step>
+  <Step title="Open the launch modal">
+    Click "Launch Token" in the navigation bar or footer.
+  </Step>
+</Steps>
+
+## The 4-Step Launch Process
+
+### Step 1: Token Details
+
+Enter the basic information for your token:
+
+| Field | Required | Details |
+|-------|----------|---------|
+| **Name** | Yes | Your token's full name (1-50 characters) |
+| **Symbol** | Yes | Trading ticker, e.g., MOON (1-10 characters) |
+| **Description** | No | Explain what your token is about |
+| **Image** | No | Upload a custom image or generate one with AI |
+
+<Tip>
+Click "Generate with AI" to create a description or image based on your token name.
+</Tip>
+
+### Step 2: Social Links
+
+Add optional links to build credibility:
+
+| Link Type | Example |
+|-----------|---------|
+| Website | `https://mytoken.com` |
+| Twitter/X | `https://x.com/mytoken` |
+| Telegram | `https://t.me/mytoken` |
+
+<Info>
+Social links appear on your token's page, helping traders verify your project.
+</Info>
+
+### Step 3: FDV Configuration
+
+Set your starting Fully Diluted Valuation (FDV):
+
+| Setting | Range | Default |
+|---------|-------|---------|
+| Starting FDV | 50 - 50,000 BNB | 500 BNB |
+
+**What is FDV?**
+
+FDV is the total market cap if all tokens were in circulation. It determines your token's starting price:
+
+```
+Token Price = FDV ÷ Total Supply
+Token Price = 500 BNB ÷ 100,000,000,000 = 0.000000005 BNB
+```
+
+<Columns cols={2}>
+  <Card title="Lower FDV (50-200 BNB)" icon="arrow-down">
+    Lower entry price, more room for price growth, attracts early buyers.
+  </Card>
+  <Card title="Higher FDV (5,000+ BNB)" icon="arrow-up">
+    Higher perceived value, larger initial liquidity, suits established projects.
+  </Card>
+</Columns>
+
+### Step 4: Review & Launch
+
+Before deploying:
+
+1. **Review all details** — Check name, symbol, and settings
+2. **Accept Terms of Service** — Required checkbox
+3. **Sign the transaction** — Your wallet will prompt for a signature
+4. **Wait for deployment** — Takes about 10-30 seconds
+
+<Warning>
+Token details cannot be changed after launch. Double-check everything before signing.
+</Warning>
+
+## Web-Exclusive Features
+
+| Feature | Details |
+|---------|---------|
+| **Custom Images** | Upload PNG/JPG up to 5MB |
+| **AI Generation** | Generate images and descriptions automatically |
+| **FDV Control** | Set any value from 50 to 50,000 BNB |
+| **Social Links** | Add website, Twitter, and Telegram |
+| **Progress Saving** | Your draft saves automatically |
+
+## Tips for Web Launches
+
+<Columns cols={2}>
+  <Card title="Use high-quality images" icon="image">
+    Clear, memorable images make your token stand out in lists.
+  </Card>
+  <Card title="Write a clear description" icon="align-left">
+    Explain your token's purpose—even memecoins benefit from context.
+  </Card>
+  <Card title="Add all social links" icon="share-nodes">
+    More links = more credibility for potential traders.
+  </Card>
+  <Card title="Choose FDV carefully" icon="calculator">
+    Consider your target audience and growth expectations.
+  </Card>
+</Columns>
+
+## Common Questions
+
+<Accordion title="Do I need BNB to launch?">
+  No—token creation is gasless. You sign a message, not a transaction. You only need BNB if you want to buy your own token after launch.
+</Accordion>
+
+<Accordion title="Can I edit my token after launch?">
+  Token parameters (name, symbol, supply) are immutable. However, you can update your profile and add more context to your creator page.
+</Accordion>
+
+<Accordion title="What if my image upload fails?">
+  Images are stored on IPFS via Pinata. If upload fails:
+  - Try a smaller file (under 5MB)
+  - Use PNG or JPG format
+  - Try the AI image generator as an alternative
+</Accordion>
+
+<Accordion title="Why do I need to sign a message?">
+  The signature proves you're the creator without paying gas fees. It's a cryptographic proof of ownership that links your wallet to the token.
+</Accordion>
+
+## After Launch
+
+<Steps>
+  <Step title="View your token">
+    You'll be redirected to your token's page automatically.
+  </Step>
+  <Step title="Share on social media">
+    Use the share buttons to announce on Twitter and Farcaster.
+  </Step>
+  <Step title="Monitor trading">
+    Watch real-time trades, holder counts, and volume.
+  </Step>
+  <Step title="Collect rewards">
+    Your 40% fee share accumulates automatically.
+  </Step>
+</Steps>
+
+<Card title="Learn about customization options" icon="sliders" href="/create/customization">
+  Advanced tips for branding your token
+</Card>

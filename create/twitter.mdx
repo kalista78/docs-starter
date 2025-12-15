@@ -1,0 +1,119 @@
+---
+title: Launch via Twitter
+description: Create tokens with a single tweet
+---
+
+# Twitter Token Launch
+
+Create a tradeable token by tweeting at `@SlinqBot`. Your token deploys in seconds and is immediately tradeable.
+
+## Tweet Format
+
+```
+@SlinqBot deploy $TICKER "Token Name"
+```
+
+**Examples:**
+```
+@SlinqBot deploy $MOON "Moon Token"
+@SlinqBot create $DOGE "Super Doge"
+@SlinqBot launch $PEPE "Pepe 2.0"
+```
+
+<Tip>
+Keywords `deploy`, `create`, and `launch` all work the same way.
+</Tip>
+
+## How It Works
+
+<Steps>
+  <Step title="Tweet your request">
+    Post a public tweet mentioning `@SlinqBot` with your token ticker and name.
+  </Step>
+  <Step title="Bot processes your request">
+    Slinq detects your mention and validates the parameters.
+  </Step>
+  <Step title="Token deploys">
+    Your token is created on BNB Chain with locked liquidity on PancakeSwap.
+  </Step>
+  <Step title="Receive confirmation">
+    `@SlinqBot` replies to your tweet with:
+    - Token contract address
+    - Link to trade on Slinq
+    - Your creator dashboard link
+  </Step>
+</Steps>
+
+## Requirements
+
+| Requirement | Details |
+|------------|---------|
+| **Twitter Account** | Must be public (not private/protected) |
+| **Ticker** | 1-10 characters, letters and numbers only |
+| **Name** | 1-50 characters |
+| **Daily Limit** | 2 tokens per Twitter account |
+
+## Token Parameters
+
+Tokens created via Twitter use these defaults:
+
+| Parameter | Value |
+|-----------|-------|
+| Starting FDV | 500 BNB |
+| Total Supply | 100 Billion |
+| Trading Pair | TOKEN/WBNB |
+| Image | Auto-generated from token name |
+| Description | Auto-generated |
+
+<Info>
+Want custom images or descriptions? Use the [web interface](/create/web) instead.
+</Info>
+
+## Tips for Success
+
+<Columns cols={2}>
+  <Card title="Choose a memorable ticker" icon="tag">
+    Short, catchy tickers like $MOON or $BASED are easier to remember and share.
+  </Card>
+  <Card title="Tweet at peak hours" icon="clock">
+    Launch when your followers are active for maximum initial engagement.
+  </Card>
+  <Card title="Pin your launch tweet" icon="thumbtack">
+    Pin the confirmation reply so new followers can find your token.
+  </Card>
+  <Card title="Engage your community" icon="comments">
+    Reply to comments and keep the conversation going in your thread.
+  </Card>
+</Columns>
+
+## Common Issues
+
+<Accordion title="My tweet wasn't detected">
+  - Make sure your account is public, not protected
+  - Check that you mentioned `@SlinqBot` correctly
+  - Verify your ticker doesn't contain special characters
+  - Wait 2-3 minutes—there can be brief delays during high volume
+</Accordion>
+
+<Accordion title="Ticker already taken">
+  Each ticker can only be used once. Try a variation:
+  - Add numbers: `$MOON2`, `$DOGE99`
+  - Use abbreviations: `$MTK` instead of `$MYTOKEN`
+</Accordion>
+
+<Accordion title="Rate limit reached">
+  You can create 2 tokens per day via Twitter. Wait until midnight UTC for your limit to reset, or use the [web interface](/create/web) for additional launches.
+</Accordion>
+
+## After Launch
+
+Once your token is live:
+
+1. **Share the trading link** — Get it from the bot's reply
+2. **Monitor trading** — Watch activity on your token's Slinq page
+3. **Collect rewards** — Fees accumulate automatically in your creator dashboard
+4. **Earn points** — Every trade earns you Season Pass points
+
+<Card title="View your creator dashboard" icon="chart-pie" href="https://slinq.xyz">
+  Track fees, trading volume, and holder counts
+</Card>

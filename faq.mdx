@@ -1,0 +1,181 @@
+---
+title: FAQ
+description: Frequently asked questions about Slinq
+---
+
+# Frequently Asked Questions
+
+## General
+
+<Accordion title="What is Slinq?">
+  Slinq is a social token factory on BNB Chain. You can create tradeable tokens directly from Twitter, Farcaster, or our web interface. Every token automatically gets:
+  - Locked liquidity on PancakeSwap
+  - 40% of trading fees going to the creator
+  - MEV protection during launch
+</Accordion>
+
+<Accordion title="How is Slinq different from pump.fun or Four.meme?">
+  **Creator rewards:** Slinq gives creators 40% of all trading fees. Most competitors give 0%.
+
+  **Multi-platform launch:** Create tokens from Twitter, Farcaster, or web—not just one interface.
+
+  **BNB Chain:** Lower fees than Solana or Base, with deep PancakeSwap liquidity.
+</Accordion>
+
+<Accordion title="Is Slinq safe?">
+  Slinq is designed with safety in mind:
+  - All liquidity is permanently locked (no rugs)
+  - Smart contracts are open source
+  - MEV protection prevents bot exploitation
+  - No team tokens or hidden allocations
+
+  However, memecoins are inherently risky. Only invest what you can afford to lose.
+</Accordion>
+
+<Accordion title="What blockchain does Slinq use?">
+  Slinq runs on **BNB Chain** (Chain ID 56). All tokens are BEP-20 tokens traded on PancakeSwap V4 Infinity.
+</Accordion>
+
+## Token Creation
+
+<Accordion title="How much does it cost to create a token?">
+  Token creation is **free** (gasless). You only need to sign a message with your wallet—no transaction fees for deployment.
+</Accordion>
+
+<Accordion title="Can I edit my token after launching?">
+  No. Token parameters (name, symbol, supply, image) are permanent and immutable. Double-check everything before launching.
+</Accordion>
+
+<Accordion title="What's the token supply?">
+  All Slinq tokens have a fixed supply of **100 billion** tokens. This cannot be changed.
+</Accordion>
+
+<Accordion title="Can I set a custom supply?">
+  No. The 100 billion supply is fixed for all tokens to ensure consistency across the platform.
+</Accordion>
+
+<Accordion title="What's FDV and how do I choose it?">
+  FDV (Fully Diluted Valuation) is the total market cap at launch. It determines your token's initial price.
+
+  - **Low FDV (50-200 BNB):** Lower entry price, more growth potential
+  - **Medium FDV (500-2,000 BNB):** Balanced approach
+  - **High FDV (5,000+ BNB):** Higher initial value, needs strong community
+</Accordion>
+
+<Accordion title="Can someone copy my token?">
+  Tickers are unique—no one can use the same symbol. However, anyone can create a similarly named token. Build your community to establish authenticity.
+</Accordion>
+
+## Trading
+
+<Accordion title="Where are tokens traded?">
+  All Slinq tokens trade on **PancakeSwap V4 Infinity** through our integrated interface. You can also trade directly on PancakeSwap using the token's contract address.
+</Accordion>
+
+<Accordion title="What are the trading fees?">
+  - **Base fee:** 1% of trade value
+  - **Creator share:** 40% (0.4% of trade)
+  - **Protocol share:** 60% (0.6% of trade)
+  - Plus gas fees for BNB Chain
+</Accordion>
+
+<Accordion title="What is MEV protection?">
+  MEV (Maximal Extractable Value) bots try to exploit new launches by front-running and sandwiching trades. Slinq charges higher fees (10% → 1%) during the first 2 minutes to make these attacks unprofitable.
+</Accordion>
+
+<Accordion title="Why did my transaction fail?">
+  Common reasons:
+  - Insufficient BNB for gas
+  - Price moved too much (slippage)
+  - Network congestion
+
+  Try again with more BNB in your wallet.
+</Accordion>
+
+<Accordion title="Can I trade on other DEXs?">
+  Yes. Slinq tokens are standard BEP-20 tokens. You can trade them anywhere that supports the contract address. However, trading outside Slinq may have different fees.
+</Accordion>
+
+## Creator Rewards
+
+<Accordion title="How do I earn as a creator?">
+  You automatically earn 40% of all trading fees on your token. Fees accumulate in the fee locker contract and can be claimed anytime.
+</Accordion>
+
+<Accordion title="When can I claim my fees?">
+  Anytime. There's no minimum or waiting period. Just visit your creator dashboard and click "Claim."
+</Accordion>
+
+<Accordion title="Are fees paid in BNB or the token?">
+  Fees are paid in **WBNB** (Wrapped BNB), which is equivalent to BNB. You can unwrap it on PancakeSwap if needed.
+</Accordion>
+
+<Accordion title="What if no one trades my token?">
+  No trades = no fees. Focus on building community and utility to drive trading activity.
+</Accordion>
+
+## Season Pass
+
+<Accordion title="How do I earn points?">
+  Three ways:
+  - **Trading:** 1 point per BNB traded
+  - **Creating:** 400 points per BNB in creator fees
+  - **Referring:** 25% of your referrals' points
+</Accordion>
+
+<Accordion title="Do points expire?">
+  Points last until the season ends. When a new season starts, points reset to zero.
+</Accordion>
+
+<Accordion title="What do I get for points?">
+  Points determine your rank on the leaderboard. Top performers receive rewards at season end. Higher tiers also unlock point multipliers.
+</Accordion>
+
+<Accordion title="Can I transfer or sell points?">
+  No. Points are non-transferable and tied to your wallet.
+</Accordion>
+
+## Technical
+
+<Accordion title="What wallet should I use?">
+  Any BNB Chain compatible wallet:
+  - MetaMask
+  - WalletConnect
+  - Coinbase Wallet
+  - Embedded wallet (via email sign-in)
+</Accordion>
+
+<Accordion title="How do I add BNB Chain to my wallet?">
+  Most wallets add it automatically. If needed:
+  - Network Name: BNB Smart Chain
+  - RPC: https://bsc-dataseed.binance.org
+  - Chain ID: 56
+  - Symbol: BNB
+  - Explorer: https://bscscan.com
+</Accordion>
+
+<Accordion title="Where can I view my tokens?">
+  - In your wallet (may need to import the token address)
+  - On BscScan using your wallet address
+  - On the "My Tokens" page when connected to Slinq
+</Accordion>
+
+<Accordion title="What's the contract address for my token?">
+  Find it on your token's Slinq page or in the confirmation tweet/cast when you created it.
+</Accordion>
+
+## Support
+
+<Accordion title="I have a problem. How do I get help?">
+  - Check this FAQ first
+  - Join our [Telegram community](https://t.me/slinqxyz)
+  - Follow [@Slinqfun](https://x.com/Slinqfun) for updates
+</Accordion>
+
+<Accordion title="Is there a bug bounty program?">
+  Contact us through official channels if you discover a security vulnerability. We take security seriously.
+</Accordion>
+
+<Accordion title="Can I partner with Slinq?">
+  Reach out through our official Twitter or Telegram for partnership inquiries.
+</Accordion>

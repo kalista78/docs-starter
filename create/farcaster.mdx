@@ -1,0 +1,138 @@
+---
+title: Launch via Farcaster
+description: Deploy tokens from Warpcast and Farcaster clients
+---
+
+# Farcaster Token Launch
+
+Create tokens directly from Warpcast or any Farcaster client by casting at `@slinq`.
+
+## Cast Format
+
+```
+@slinq deploy $TICKER "Token Name"
+```
+
+**Examples:**
+```
+@slinq deploy $BASED "Based Token"
+@slinq create $FCAST "Farcaster Coin"
+@slinq launch $DEGEN "Degen Mode"
+```
+
+<Tip>
+Keywords `deploy`, `create`, `launch`, `make`, and `build` all work.
+</Tip>
+
+## How It Works
+
+<Steps>
+  <Step title="Cast your token">
+    Post a cast mentioning `@slinq` with your ticker and name.
+  </Step>
+  <Step title="Slinq processes the cast">
+    The Farcaster bot validates your request and prepares the deployment.
+  </Step>
+  <Step title="Token goes live">
+    Your token deploys on BNB Chain with locked liquidity.
+  </Step>
+  <Step title="Confirmation cast">
+    Slinq replies to your cast with:
+    - Contract address
+    - Trading link
+    - Creator dashboard link
+  </Step>
+</Steps>
+
+## Requirements
+
+| Requirement | Details |
+|------------|---------|
+| **Farcaster Account** | Active account on any client |
+| **Ticker** | 1-10 characters, alphanumeric |
+| **Name** | 1-50 characters |
+| **Daily Limit** | 4 tokens per Farcaster ID |
+
+## Token Parameters
+
+Farcaster launches use these defaults:
+
+| Parameter | Value |
+|-----------|-------|
+| Starting FDV | 500 BNB |
+| Total Supply | 100 Billion |
+| Trading Pair | TOKEN/WBNB |
+| Image | Auto-generated |
+| Description | Auto-generated from cast |
+
+## Farcaster-Specific Features
+
+### Frame Integration
+
+Slinq's confirmation casts include Farcaster Frames, letting your followers:
+- See token stats at a glance
+- Trade directly from the frame
+- Share with one tap
+
+### Social Context
+
+Your Farcaster profile becomes linked to your token:
+- Profile picture appears on token page
+- Username shown as creator
+- Followers can find your tokens easily
+
+## Tips for Farcaster Launches
+
+<Columns cols={2}>
+  <Card title="Launch in relevant channels" icon="hashtag">
+    Post in channels like /degen or /base for more visibility.
+  </Card>
+  <Card title="Use your community" icon="users">
+    Tag friends and communities who might be interested.
+  </Card>
+  <Card title="Add context" icon="message">
+    Explain what your token is about in the same cast or thread.
+  </Card>
+  <Card title="Engage replies" icon="reply">
+    Respond to people interested in your token to build community.
+  </Card>
+</Columns>
+
+## Common Issues
+
+<Accordion title="Cast not detected">
+  - Ensure you're mentioning `@slinq` (not `@Slinq` or other variations)
+  - Check that your cast is public
+  - Wait 1-2 minutes—processing can take a moment
+</Accordion>
+
+<Accordion title="Ticker unavailable">
+  Tickers are unique across the platform. Try:
+  - Adding numbers: `$BASED2`
+  - Using variations: `$BSED` instead of `$BASED`
+</Accordion>
+
+<Accordion title="Daily limit reached">
+  Farcaster allows 4 tokens per day. Use the [web interface](/create/web) for additional launches or wait until midnight UTC.
+</Accordion>
+
+## After Your Token Launches
+
+<Steps>
+  <Step title="Share the frame">
+    Recast the confirmation to spread the word.
+  </Step>
+  <Step title="Monitor activity">
+    Watch trades and holders on your token's Slinq page.
+  </Step>
+  <Step title="Collect rewards">
+    40% of trading fees go to your creator wallet.
+  </Step>
+  <Step title="Build community">
+    Keep casting about your token to maintain engagement.
+  </Step>
+</Steps>
+
+<Card title="Need more customization?" icon="palette" href="/create/web">
+  Use the web interface for custom images, descriptions, and FDV settings
+</Card>

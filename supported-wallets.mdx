@@ -1,0 +1,71 @@
+---
+title: Supported Wallets
+description: Connect any popular wallet to use Slinq
+---
+
+# Wallet Support
+
+Slinq uses Privy for seamless wallet connections. You can use any of these methods to access the platform.
+
+## Wallet Options
+
+<Columns cols={2}>
+  <Card title="MetaMask" icon="wallet">
+    The most popular browser extension wallet. Works on desktop and mobile.
+  </Card>
+  <Card title="WalletConnect" icon="link">
+    Connect any WalletConnect-compatible mobile wallet by scanning a QR code.
+  </Card>
+  <Card title="Coinbase Wallet" icon="wallet">
+    Connect your Coinbase Wallet extension or mobile app.
+  </Card>
+  <Card title="Embedded Wallet" icon="key">
+    Create a wallet instantly using your email—no extension needed.
+  </Card>
+</Columns>
+
+## Social Login
+
+Don't have a crypto wallet? Sign in with your existing accounts:
+
+- **Email** — Create an embedded wallet with just your email address
+- **Twitter/X** — Sign in with your Twitter account
+- **Farcaster** — Connect through your Farcaster identity
+
+<Info>
+Social logins create a non-custodial embedded wallet. You maintain full control of your funds.
+</Info>
+
+## Network Setup
+
+Slinq runs on **BNB Chain** (Chain ID: 56). Most wallets will prompt you to add or switch to BNB Chain automatically.
+
+If you need to add BNB Chain manually:
+
+| Setting | Value |
+|---------|-------|
+| Network Name | BNB Smart Chain |
+| RPC URL | `https://bsc-dataseed.binance.org` |
+| Chain ID | 56 |
+| Currency Symbol | BNB |
+| Block Explorer | `https://bscscan.com` |
+
+## Getting BNB
+
+You need BNB to pay for gas fees and trade tokens. Here's how to get some:
+
+<Steps>
+  <Step title="Buy on an exchange">
+    Purchase BNB on Binance, Coinbase, or any major exchange.
+  </Step>
+  <Step title="Withdraw to your wallet">
+    Send BNB to your wallet address using the **BEP-20 (BSC)** network.
+  </Step>
+  <Step title="Start trading">
+    Once BNB arrives, you're ready to create and trade tokens on Slinq.
+  </Step>
+</Steps>
+
+<Warning>
+Always use the **BEP-20** or **BSC** network when withdrawing. Sending BNB on the wrong network will result in lost funds.
+</Warning>

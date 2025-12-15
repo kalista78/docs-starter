@@ -1,0 +1,142 @@
+---
+title: How Fees Accumulate
+description: Understanding the fee collection and distribution process
+---
+
+# How Fees Accumulate
+
+Every trade on your token generates fees. Here's how those fees flow to you.
+
+## The Fee Flow
+
+<Steps>
+  <Step title="Trade Happens">
+    A user buys or sells your token on Slinq.
+  </Step>
+  <Step title="Fee Collected">
+    1% of the trade value is automatically collected by the LP locker contract.
+  </Step>
+  <Step title="Split Executed">
+    The fee is split: 40% to your creator wallet, 60% to the protocol.
+  </Step>
+  <Step title="Balance Updates">
+    Your pending balance in the fee locker increases.
+  </Step>
+  <Step title="Claim When Ready">
+    You can claim your accumulated fees at any time.
+  </Step>
+</Steps>
+
+## Fee Collection Mechanics
+
+### What Generates Fees
+
+Every trade in your token's pool generates fees:
+
+| Action | Fee Generated | Your Share |
+|--------|--------------|------------|
+| User buys token | 1% of BNB spent | 0.4% |
+| User sells token | 1% of BNB received | 0.4% |
+
+### Fee Accumulation
+
+Fees accumulate in the fee locker contract:
+
+```
+Your Balance = Sum of (0.4% × Trade Value) for all trades
+```
+
+<Info>
+Fees are paid in WBNB (Wrapped BNB), which is equivalent to BNB and automatically unwrapped when you claim.
+</Info>
+
+## Tracking Your Earnings
+
+### Creator Dashboard
+
+Your dashboard shows:
+
+| Metric | Description |
+|--------|-------------|
+| **Pending Fees** | WBNB ready to claim |
+| **Total Claimed** | Lifetime withdrawals |
+| **24h Earnings** | Fees from the last day |
+| **7d Earnings** | Fees from the last week |
+
+### Per-Token Breakdown
+
+For each token you've created:
+
+- Trading volume (24h, 7d, all-time)
+- Fees generated
+- Your share earned
+- Claim history
+
+## Factors Affecting Earnings
+
+<Columns cols={2}>
+  <Card title="Trading Volume" icon="chart-line">
+    More trades = more fees. Active tokens earn more.
+  </Card>
+  <Card title="Trade Size" icon="scale-balanced">
+    Larger trades generate proportionally more fees.
+  </Card>
+  <Card title="Community Activity" icon="users">
+    Engaged communities trade more frequently.
+  </Card>
+  <Card title="Token Performance" icon="arrow-trend-up">
+    Price movements drive trading activity.
+  </Card>
+</Columns>
+
+## Maximizing Your Earnings
+
+<Steps>
+  <Step title="Build Community">
+    Active communities trade more. Engage on Twitter and Telegram.
+  </Step>
+  <Step title="Create Quality Tokens">
+    Tokens with good branding and clear purpose attract more traders.
+  </Step>
+  <Step title="Stay Active">
+    Regular updates keep your community engaged and trading.
+  </Step>
+  <Step title="Launch Multiple Tokens">
+    Diversify your earnings across different tokens and communities.
+  </Step>
+</Steps>
+
+## Fee Points (Season Pass)
+
+In addition to WBNB earnings, you also receive Season Pass points:
+
+| Event | Points Earned |
+|-------|--------------|
+| Fee Collection | 400 points per WBNB |
+| Minimum | 2 points per collection |
+
+<Tip>
+Points from fee earnings count toward your Season Pass rank and rewards.
+</Tip>
+
+## Common Questions
+
+<Accordion title="How often are fees collected?">
+  Fees accumulate with every trade. The balance in the fee locker updates in real-time.
+</Accordion>
+
+<Accordion title="Is there a minimum to claim?">
+  There's no minimum. However, claiming costs a small gas fee, so it's more efficient to wait until you've accumulated a meaningful amount.
+</Accordion>
+
+<Accordion title="Can fees be lost?">
+  No. Fees are secured in a smart contract. They cannot be lost, stolen, or redirected.
+</Accordion>
+
+<Accordion title="What if my token has no trading?">
+  No trades = no fees. Focus on building community and utility to drive trading activity.
+</Accordion>
+
+<Card title="Ready to claim?" icon="hand-holding-dollar" href="/rewards/claiming">
+  Learn how to withdraw your accumulated fees
+</Card>

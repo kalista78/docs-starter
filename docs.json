@@ -1,68 +1,74 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "Slinq",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#FACC15",
+    "light": "#FDE047",
+    "dark": "#EAB308"
   },
   "favicon": "/favicon.svg",
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "Documentation",
         "groups": [
           {
-            "group": "Getting started",
+            "group": "Getting Started",
+            "icon": "rocket",
             "pages": [
               "index",
               "quickstart",
-              "development"
+              "supported-wallets"
             ]
           },
           {
-            "group": "Customization",
+            "group": "Create Tokens",
+            "icon": "sparkles",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
+              "create/overview",
+              "create/twitter",
+              "create/farcaster",
+              "create/web",
+              "create/customization"
             ]
           },
           {
-            "group": "Writing content",
+            "group": "Trading",
+            "icon": "chart-line",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
+              "trading/overview",
+              "trading/buying",
+              "trading/selling",
+              "trading/fees"
             ]
           },
           {
-            "group": "AI tools",
+            "group": "Creator Rewards",
+            "icon": "coins",
             "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "API reference",
-        "groups": [
-          {
-            "group": "API documentation",
-            "pages": [
-              "api-reference/introduction"
+              "rewards/overview",
+              "rewards/earning-fees",
+              "rewards/claiming"
             ]
           },
           {
-            "group": "Endpoint examples",
+            "group": "Season Pass",
+            "icon": "trophy",
             "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "season/overview",
+              "season/earning-points",
+              "season/leaderboard",
+              "season/referrals"
+            ]
+          },
+          {
+            "group": "Resources",
+            "icon": "book",
+            "pages": [
+              "faq",
+              "glossary",
+              "security"
             ]
           }
         ]
@@ -71,14 +77,14 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
+          "anchor": "Launch App",
+          "href": "https://slinq.xyz",
+          "icon": "rocket"
         },
         {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
+          "anchor": "Twitter",
+          "href": "https://x.com/Slinqfun",
+          "icon": "x-twitter"
         }
       ]
     }
@@ -90,33 +96,28 @@
   "navbar": {
     "links": [
       {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "label": "Community",
+        "href": "https://t.me/slinqxyz"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "label": "Launch App",
+      "href": "https://slinq.xyz"
     }
   },
   "contextual": {
     "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
+      "copy",
+      "view",
+      "chatgpt",
+      "claude"
+    ]
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "x": "https://x.com/Slinqfun",
+      "telegram": "https://t.me/slinqxyz"
     }
   }
 }

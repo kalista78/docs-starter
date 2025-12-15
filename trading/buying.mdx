@@ -1,0 +1,157 @@
+---
+title: Buying Tokens
+description: How to buy tokens on Slinq
+---
+
+# How to Buy Tokens
+
+Purchase any Slinq token using BNB. The process takes just a few clicks.
+
+## Before You Buy
+
+Make sure you have:
+
+- [ ] Wallet connected to Slinq
+- [ ] BNB in your wallet (for purchase + gas)
+- [ ] Wallet on BNB Chain (Chain ID 56)
+
+<Warning>
+Only buy with funds you can afford to lose. Memecoins are highly volatile and speculative.
+</Warning>
+
+## Step-by-Step Guide
+
+<Steps>
+  <Step title="Find your token">
+    Navigate to the token you want to buy:
+    - Search by name or ticker in the search bar
+    - Browse trending tokens on the homepage
+    - Click a direct link from Twitter or Farcaster
+  </Step>
+  <Step title="Open the buy panel">
+    On the token page, locate the trading panel. Make sure "Buy" is selected.
+  </Step>
+  <Step title="Enter your amount">
+    Type how much BNB you want to spend. You'll see:
+    - Estimated tokens received
+    - Price per token
+    - Total including fees
+  </Step>
+  <Step title="Review the quote">
+    Check the details:
+    - Are you getting the expected amount?
+    - Is the price acceptable?
+    - Is slippage within your tolerance?
+  </Step>
+  <Step title="Confirm the transaction">
+    Click "Buy" and approve the transaction in your wallet. Wait for confirmation.
+  </Step>
+  <Step title="Tokens arrive">
+    Your tokens appear in your wallet immediately after the transaction confirms.
+  </Step>
+</Steps>
+
+## Understanding the Quote
+
+When you enter an amount, you'll see:
+
+| Field | Meaning |
+|-------|---------|
+| **You Pay** | BNB amount leaving your wallet |
+| **You Receive** | Tokens you'll get |
+| **Price** | Current token price in BNB |
+| **Price Impact** | How much your trade moves the price |
+| **Fee** | 1% trading fee included |
+
+## Price Impact
+
+Large trades move the price. This is called price impact or slippage.
+
+| Trade Size | Typical Impact |
+|------------|---------------|
+| Small (< 0.1 BNB) | < 0.1% |
+| Medium (0.1-1 BNB) | 0.1-1% |
+| Large (> 1 BNB) | 1%+ |
+
+<Tip>
+For large purchases, consider splitting into multiple smaller trades to reduce price impact.
+</Tip>
+
+## MEV Protection
+
+During the first 2 minutes after a token launches, dynamic fees protect against bots:
+
+| Time After Launch | Fee |
+|-------------------|-----|
+| 0-30 seconds | 10% |
+| 30-60 seconds | ~7% |
+| 60-90 seconds | ~4% |
+| 90-120 seconds | ~2% |
+| After 2 minutes | 1% |
+
+<Info>
+Higher early fees discourage sniping bots and give regular users a fair chance.
+</Info>
+
+## Common Issues
+
+<Accordion title="Transaction failed">
+  Common causes:
+  - **Insufficient BNB**: You need BNB for the purchase AND gas fees
+  - **Slippage too low**: The price moved while you were confirming
+  - **Network congestion**: Try again with higher gas
+
+  **Fix**: Add more BNB to your wallet and retry.
+</Accordion>
+
+<Accordion title="Price changed">
+  Token prices move constantly. If the price changed significantly:
+  - The transaction may fail
+  - You might receive slightly different amounts
+
+  **Fix**: Refresh the page to get a new quote.
+</Accordion>
+
+<Accordion title="Tokens not appearing">
+  After buying, tokens should appear immediately. If not:
+  1. Wait for the transaction to confirm (check BscScan)
+  2. Add the token address to your wallet manually
+  3. Refresh your wallet's token list
+</Accordion>
+
+<Accordion title="How do I add the token to my wallet?">
+  1. Copy the token's contract address from the Slinq token page
+  2. In MetaMask, click "Import tokens"
+  3. Paste the contract address
+  4. The name and symbol should auto-fill
+  5. Click "Add"
+</Accordion>
+
+## Tips for Buying
+
+<Columns cols={2}>
+  <Card title="Check the chart first" icon="chart-line">
+    Look at recent price action before buying.
+  </Card>
+  <Card title="Start small" icon="seedling">
+    Test with a small amount before larger buys.
+  </Card>
+  <Card title="Watch for launches" icon="rocket">
+    New tokens often have the most volatility.
+  </Card>
+  <Card title="Earn points" icon="trophy">
+    Every buy earns you Season Pass points.
+  </Card>
+</Columns>
+
+## After Buying
+
+Once you own tokens:
+
+- **Monitor price** — Watch your token's page for movements
+- **Earn points** — Trading volume earns Season Pass points
+- **Sell when ready** — Use the sell panel on the same page
+
+<Card title="Learn how to sell" icon="money-bill-wave" href="/trading/selling">
+  Guide to selling your tokens
+</Card>

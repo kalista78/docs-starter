@@ -1,0 +1,174 @@
+---
+title: Security
+description: How Slinq keeps you and your tokens safe
+---
+
+# Security
+
+Slinq is designed with security as a priority. Here's how we protect you.
+
+## Smart Contract Security
+
+### Locked Liquidity
+
+Every Slinq token has **permanently locked liquidity**:
+
+- LP tokens are sent to the LP Locker contract
+- There is no withdraw function
+- Not even the Slinq team can unlock liquidity
+- This prevents "rug pulls" where creators steal funds
+
+<Check>
+Once liquidity is locked, it cannot be removed—ever. Your trading pool is permanent.
+</Check>
+
+### Immutable Token Parameters
+
+After launch, token properties cannot be changed:
+
+| Parameter | Changeable? |
+|-----------|-------------|
+| Name | No |
+| Symbol | No |
+| Supply | No |
+| Image | No |
+| Creator wallet | No |
+
+<Info>
+Immutability protects traders from bait-and-switch schemes where creators change token details after launch.
+</Info>
+
+### No Team Tokens
+
+Slinq tokens have:
+- 100% of supply in the liquidity pool
+- 0% team allocation
+- 0% pre-mine
+- No hidden wallets
+
+The creator only earns through trading fees, not token holdings.
+
+## MEV Protection
+
+### What is MEV?
+
+MEV (Maximal Extractable Value) attacks include:
+- **Front-running:** Bots buying before your transaction to profit from price impact
+- **Sandwiching:** Bots buying before and selling after your trade
+- **Sniping:** Bots grabbing tokens in the first block of a launch
+
+### How We Protect You
+
+Slinq uses dynamic fees that decay over 2 minutes:
+
+| Time After Launch | Fee |
+|-------------------|-----|
+| 0-30 seconds | 10% |
+| 30-60 seconds | ~7% |
+| 60-90 seconds | ~4% |
+| 90-120 seconds | ~2% |
+| After 2 minutes | 1% |
+
+High early fees make MEV attacks unprofitable, giving regular users fair access.
+
+## Fee Distribution Security
+
+### Smart Contract Custody
+
+Creator fees are held by the **Fee Locker** smart contract:
+
+- Not controlled by Slinq team
+- Only the creator wallet can claim
+- Cannot be redirected or stolen
+- Transparent on-chain
+
+### Claim Safety
+
+When you claim fees:
+- Only your wallet can initiate the claim
+- Funds go directly to your wallet
+- No intermediaries or custodians
+
+## Platform Security
+
+### Wallet Connections
+
+Slinq uses **Privy** for secure wallet connections:
+
+- We never see or store your private keys
+- Sign-in uses cryptographic signatures
+- Session tokens are encrypted
+- No password storage on our servers
+
+### Signature-Based Deployment
+
+Token creation uses EIP-712 typed signatures:
+
+- You sign a message, not a transaction
+- No gas fees for deployment
+- Replay protection prevents duplicate deploys
+- Signature proves ownership without exposing keys
+
+## Best Practices for Users
+
+<Columns cols={2}>
+  <Card title="Protect your wallet" icon="shield">
+    - Never share your seed phrase
+    - Use hardware wallets for large holdings
+    - Verify transaction details before signing
+  </Card>
+  <Card title="Verify before trading" icon="search">
+    - Check the contract address
+    - Verify the creator
+    - Research before buying large amounts
+  </Card>
+  <Card title="Be cautious of scams" icon="warning">
+    - Slinq team will never DM you first
+    - No one needs your seed phrase
+    - Verify links before clicking
+  </Card>
+  <Card title="Start small" icon="seedling">
+    - Test with small amounts first
+    - Don't invest more than you can lose
+    - Memecoins are highly speculative
+  </Card>
+</Columns>
+
+## Reporting Security Issues
+
+If you discover a vulnerability:
+
+1. **Do not** post publicly
+2. Contact us through official channels
+3. Provide detailed reproduction steps
+4. Allow time for us to fix before disclosure
+
+We take security reports seriously and appreciate responsible disclosure.
+
+## Risk Disclaimer
+
+<Warning>
+**Memecoins are high-risk assets.** Despite our security measures:
+
+- Token prices can drop to zero
+- Trading involves financial risk
+- Past performance doesn't predict future results
+- Only invest what you can afford to lose completely
+
+Slinq provides the platform; investment decisions are yours alone.
+</Warning>
+
+## Contract Addresses
+
+For verification, here are Slinq's official contract addresses on BNB Chain:
+
+| Contract | Address |
+|----------|---------|
+| Zyper Factory | `0x138A3070689f094F5c9e48Eb558EfA74cfBf11d6` |
+| Zyper Hook | `0x2f8a02DeD88aFb9AE81c10A2C26f24d973011c7d` |
+| LP Locker | `0xA0c13A54499FEC6C6e25F2530aeE48B23655f0A6` |
+| Fee Locker | `0x28590aBB3c6a06856ef3c4e6E4754093D0291414` |
+
+<Info>
+Always verify contract addresses through official sources before interacting with them directly.
+</Info>

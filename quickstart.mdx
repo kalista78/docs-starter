@@ -1,80 +1,100 @@
 ---
-title: "Quickstart"
-description: "Start building awesome documentation in minutes"
+title: Quickstart
+description: Create your first token in under a minute
 ---
 
-## Get started in three steps
+# Launch Your First Token
 
-Get your documentation site running locally and make your first customization.
+Choose your preferred method to create a token. All options result in the same token with identical features.
 
-### Step 1: Set up your local environment
+<Tabs>
+  <Tab title="Twitter" icon="x-twitter">
+    The fastest way to launch—directly from your Twitter feed.
 
-<AccordionGroup>
-  <Accordion icon="copy" title="Clone your docs locally">
-    During the onboarding process, you created a GitHub repository with your docs content if you didn't already have one. You can find a link to this repository in your [dashboard](https://dashboard.mintlify.com).
-    
-    To clone the repository locally so that you can make and preview changes to your docs, follow the [Cloning a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) guide in the GitHub docs.
-  </Accordion>
-  <Accordion icon="rectangle-terminal" title="Start the preview server">
-    1. Install the Mintlify CLI: `npm i -g mint`
-    2. Navigate to your docs directory and run: `mint dev`
-    3. Open `http://localhost:3000` to see your docs live!
-    
-    <Tip>Your preview updates automatically as you edit files.</Tip>
-  </Accordion>
-</AccordionGroup>
+    <Steps>
+      <Step title="Compose your tweet">
+        Post a tweet mentioning `@SlinqBot` with your token details:
+        ```
+        @SlinqBot deploy $MOON "Moon Token"
+        ```
+      </Step>
+      <Step title="Wait for confirmation">
+        Within seconds, you'll receive a reply with your token's contract address and trading link.
+      </Step>
+      <Step title="Start trading">
+        Click the link to view your token on Slinq. Trading is live immediately.
+      </Step>
+    </Steps>
 
-### Step 2: Deploy your changes
+    <Tip>Your Twitter handle becomes the token creator. You'll earn 40% of all trading fees.</Tip>
+  </Tab>
 
-<AccordionGroup>
-  <Accordion icon="github" title="Install our GitHub app">
-    Install the Mintlify GitHub app from your [dashboard](https://dashboard.mintlify.com/settings/organization/github-app).
-    
-    Our GitHub app automatically deploys your changes to your docs site, so you don't need to manage deployments yourself.
-</Accordion>
-<Accordion icon="palette" title="Update your site name and colors">
-    For a first change, let's update the name and colors of your docs site.
+  <Tab title="Farcaster" icon="message">
+    Launch tokens natively from Warpcast or any Farcaster client.
 
-    1. Open `docs.json` in your editor.
-    2. Change the `"name"` field to your project name.
-    3. Update the `"colors"` to match your brand.
-    4. Save and see your changes instantly at `http://localhost:3000`.
+    <Steps>
+      <Step title="Cast your token">
+        Post a cast mentioning `@slinq` with your token details:
+        ```
+        @slinq deploy $BASED "Based Token"
+        ```
+      </Step>
+      <Step title="Receive confirmation">
+        Slinq replies to your cast with the token address and trading link.
+      </Step>
+      <Step title="Share and trade">
+        Your followers can trade immediately from the embedded link.
+      </Step>
+    </Steps>
+  </Tab>
 
-    <Tip>Try changing the primary color to see an immediate difference!</Tip>
-  </Accordion>
-</AccordionGroup>
+  <Tab title="Web Interface" icon="browser">
+    Full control over every aspect of your token.
 
-### Step 3: Go live
+    <Steps>
+      <Step title="Connect your wallet">
+        Visit [slinq.xyz](https://slinq.xyz) and connect with any supported wallet.
+      </Step>
+      <Step title="Click Launch Token">
+        Find the "Launch Token" button in the navigation bar.
+      </Step>
+      <Step title="Fill in token details">
+        Enter your token name, symbol, description, and upload an image.
+      </Step>
+      <Step title="Set your FDV">
+        Choose your starting Fully Diluted Valuation (50-50,000 BNB).
+      </Step>
+      <Step title="Sign and deploy">
+        Review your token, sign the transaction, and launch.
+      </Step>
+    </Steps>
 
-<Accordion icon="rocket" title="Publish your docs">
-  1. Commit and push your changes.
-  2. Your docs will update and be live in moments!
-</Accordion>
+    <Info>The web interface lets you add social links, custom images, and detailed descriptions.</Info>
+  </Tab>
+</Tabs>
 
-## Next steps
+## What Happens Next
 
-Now that you have your docs running, explore these key features:
+Once your token is created:
 
-<CardGroup cols={2}>
+1. **Liquidity is added** — Your token is paired with BNB on PancakeSwap
+2. **LP is locked forever** — The liquidity cannot be removed by anyone
+3. **Trading goes live** — Anyone can buy and sell your token immediately
+4. **You start earning** — 40% of every trade's fees flow to you
 
-<Card title="Write Content" icon="pen-to-square" href="/essentials/markdown">
-  Learn MDX syntax and start writing your documentation.
+## Token Parameters
+
+Every Slinq token has these properties:
+
+| Parameter | Value |
+|-----------|-------|
+| Total Supply | 100 Billion tokens |
+| Starting FDV | 50 - 50,000 BNB (you choose) |
+| Default FDV | 500 BNB |
+| Trading Pair | TOKEN/WBNB |
+| Base Fee | 1% |
+| Creator Share | 40% of fees |
+
+<Card title="Customize your token" icon="palette" href="/create/customization">
+  Learn how to add images, descriptions, and social links
 </Card>
-
-<Card title="Customize style" icon="palette" href="/essentials/settings">
-  Make your docs match your brand perfectly.
-</Card>
-
-<Card title="Add code examples" icon="square-code" href="/essentials/code">
-  Include syntax-highlighted code blocks.
-</Card>
-
-<Card title="API documentation" icon="code" href="/api-reference/introduction">
-  Auto-generate API docs from OpenAPI specs.
-</Card>
-
-</CardGroup>
-
-<Note>
-  **Need help?** See our [full documentation](https://mintlify.com/docs) or join our [community](https://mintlify.com/community).
-</Note>

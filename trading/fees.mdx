@@ -1,0 +1,153 @@
+---
+title: Trading Fees
+description: Understanding fees and how they're distributed
+---
+
+# Trading Fees Explained
+
+Every trade on Slinq includes a 1% fee. This fee is split between token creators and the platform.
+
+## Fee Breakdown
+
+| Recipient | Share | Per $100 Trade |
+|-----------|-------|----------------|
+| **Token Creator** | 40% | $0.40 |
+| **Slinq Protocol** | 60% | $0.60 |
+| **Total Fee** | 1% | $1.00 |
+
+<Info>
+The 40% creator share is the highest in the industry. Most platforms give creators 0%.
+</Info>
+
+## How Fees Work
+
+<Steps>
+  <Step title="Trade executed">
+    You buy or sell a token on Slinq.
+  </Step>
+  <Step title="Fee collected">
+    1% of the trade value is collected by the smart contract.
+  </Step>
+  <Step title="Automatic split">
+    The fee is split: 40% to creator, 60% to protocol.
+  </Step>
+  <Step title="Creator accumulates">
+    Creator fees accumulate in the fee locker contract.
+  </Step>
+  <Step title="Claimable anytime">
+    Creators can claim their accumulated fees whenever they want.
+  </Step>
+</Steps>
+
+## MEV Protection Fees
+
+During the first 2 minutes after launch, additional fees protect against bots:
+
+| Time Window | Total Fee | Purpose |
+|-------------|-----------|---------|
+| 0-30 seconds | 10% | Maximum protection |
+| 30-60 seconds | ~7% | High protection |
+| 60-90 seconds | ~4% | Medium protection |
+| 90-120 seconds | ~2% | Light protection |
+| After 2 minutes | 1% | Standard fee |
+
+### Why MEV Protection?
+
+MEV (Maximal Extractable Value) bots try to:
+- **Front-run** your transactions to buy before you
+- **Sandwich** your trades to profit from price movement
+- **Snipe** new launches in the first blocks
+
+High early fees make these attacks unprofitable, giving regular users a fair chance.
+
+<Tip>
+If you're not in a rush, waiting 2 minutes after launch means you pay standard 1% fees.
+</Tip>
+
+## Volatility Fees
+
+During periods of high price volatility, fees may increase slightly to protect liquidity providers. This is automatic and temporary.
+
+| Volatility Level | Fee Adjustment |
+|------------------|----------------|
+| Normal | Standard 1% |
+| Elevated | 1-2% |
+| High | 2-3% |
+
+<Info>
+Volatility fees are rare and typically only trigger during extreme price movements.
+</Info>
+
+## Comparing Fees
+
+| Platform | Trading Fee | Creator Share |
+|----------|-------------|---------------|
+| **Slinq** | 1% | 40% |
+| Four.meme | 1% | 0% |
+| Pump.fun | 1% | 0% |
+| Uniswap | 0.3% | 0% |
+| PancakeSwap | 0.25% | 0% |
+
+<Check>
+Slinq's 40% creator share means every trade supports the token's creator.
+</Check>
+
+## Gas Fees
+
+In addition to trading fees, you pay network gas:
+
+| Action | Typical Gas Cost |
+|--------|-----------------|
+| Buy | ~0.001-0.003 BNB |
+| Sell (first time) | ~0.002-0.004 BNB (includes approval) |
+| Sell (after approval) | ~0.001-0.003 BNB |
+
+<Info>
+Gas fees go to BNB Chain validators, not Slinq. They vary based on network congestion.
+</Info>
+
+## Fee FAQ
+
+<Accordion title="Do I pay fees on both buys and sells?">
+  Yes, the 1% fee applies to every trade in both directions.
+</Accordion>
+
+<Accordion title="Are fees included in the quote?">
+  Yes. The amount shown as "You Receive" is after all fees are deducted.
+</Accordion>
+
+<Accordion title="Can I avoid MEV fees?">
+  Wait 2 minutes after launch to pay standard 1% fees. The MEV decay is automatic.
+</Accordion>
+
+<Accordion title="Where can I see my fee contributions?">
+  Visit the token page to see:
+  - Total fees collected
+  - Your contribution to trading volume
+  - Creator earnings from your trades
+</Accordion>
+
+<Accordion title="As a creator, how do I claim fees?">
+  Visit your creator dashboard and click "Claim" to withdraw accumulated fees.
+</Accordion>
+
+## Why This Fee Structure?
+
+Slinq's fee model aligns incentives:
+
+<Columns cols={2}>
+  <Card title="For Traders" icon="user">
+    - Transparent 1% fee
+    - MEV protection at launch
+    - Supporting creators you believe in
+  </Card>
+  <Card title="For Creators" icon="star">
+    - 40% of all trading volume
+    - Passive income from every trade
+    - Incentive to build community
+  </Card>
+</Columns>
+
+<Card title="Learn about creator earnings" icon="coins" href="/rewards/overview">
+  How creators earn from their tokens
+</Card>

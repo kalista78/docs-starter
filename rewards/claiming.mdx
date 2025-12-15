@@ -1,0 +1,133 @@
+---
+title: Claiming Rewards
+description: Withdraw your accumulated creator fees
+---
+
+# Claiming Your Rewards
+
+When you're ready, withdraw your accumulated fees from the fee locker contract.
+
+## How to Claim
+
+<Steps>
+  <Step title="Connect your wallet">
+    Make sure you're connected with the same wallet that created your tokens.
+  </Step>
+  <Step title="Go to your creator dashboard">
+    Navigate to your profile or creator page on Slinq.
+  </Step>
+  <Step title="View pending fees">
+    See your accumulated balance across all your tokens.
+  </Step>
+  <Step title="Click Claim">
+    Select the amount to withdraw and confirm the transaction.
+  </Step>
+  <Step title="Receive WBNB">
+    Funds arrive in your wallet after the transaction confirms.
+  </Step>
+</Steps>
+
+## Claim Options
+
+| Option | Description |
+|--------|-------------|
+| **Claim All** | Withdraw your entire pending balance |
+| **Claim Per Token** | Withdraw fees from a specific token only |
+
+## Gas Costs
+
+Claiming requires a small gas fee:
+
+| Action | Typical Cost |
+|--------|--------------|
+| Single claim | ~0.001-0.002 BNB |
+| Batch claim | ~0.002-0.004 BNB |
+
+<Tip>
+Wait until you've accumulated enough to make the gas fee worthwhile. There's no rush—your fees are safe in the contract.
+</Tip>
+
+## Best Practices
+
+<Columns cols={2}>
+  <Card title="Batch your claims" icon="layer-group">
+    Let fees accumulate before claiming to save on gas.
+  </Card>
+  <Card title="Check gas prices" icon="gas-pump">
+    Claim during low-activity periods for cheaper gas.
+  </Card>
+  <Card title="Keep records" icon="file-invoice">
+    Track your claims for tax purposes.
+  </Card>
+  <Card title="Verify your wallet" icon="wallet">
+    Always claim to the wallet that created the token.
+  </Card>
+</Columns>
+
+## After Claiming
+
+Once you claim:
+
+1. **WBNB arrives** — Check your wallet balance
+2. **Unwrap if needed** — Convert WBNB to BNB on PancakeSwap
+3. **Use or hold** — Your BNB is yours to use however you want
+
+## What is WBNB?
+
+Fees are paid in WBNB (Wrapped BNB):
+
+- WBNB is an ERC-20 version of BNB
+- 1 WBNB = 1 BNB (always)
+- Can be unwrapped to native BNB on PancakeSwap
+- Works in all DeFi protocols
+
+<Info>
+Most DeFi activities accept WBNB directly, so you often don't need to unwrap it.
+</Info>
+
+## Troubleshooting
+
+<Accordion title="No pending fees showing">
+  - Verify you're connected with the correct wallet
+  - Check that your tokens have trading activity
+  - Fees update in real-time—if no trades, no fees
+</Accordion>
+
+<Accordion title="Claim transaction failed">
+  Common causes:
+  - Insufficient BNB for gas
+  - Network congestion
+
+  **Fix**: Add more BNB and try again with default gas settings.
+</Accordion>
+
+<Accordion title="Claimed but didn't receive funds">
+  1. Wait for the transaction to confirm (check BscScan)
+  2. Add WBNB to your wallet if not visible
+  3. WBNB contract: `0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c`
+</Accordion>
+
+<Accordion title="Can someone else claim my fees?">
+  No. Only the wallet that created the token can claim its fees. This is enforced by the smart contract.
+</Accordion>
+
+## Tax Considerations
+
+<Warning>
+Fee earnings may be taxable income in your jurisdiction. Keep records of:
+- Claim dates and amounts
+- BNB value at time of claim
+- Associated tokens
+
+Consult a tax professional for guidance specific to your situation.
+</Warning>
+
+## Security Notes
+
+- **Never share your private key** — No Slinq team member will ever ask for it
+- **Verify the contract** — Claims only work through the official Slinq interface
+- **Use hardware wallets** — For large balances, consider using a hardware wallet
+
+<Card title="Back to rewards overview" icon="arrow-left" href="/rewards/overview">
+  Learn more about creator rewards
+</Card>

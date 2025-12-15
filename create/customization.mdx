@@ -1,0 +1,227 @@
+---
+title: Token Customization
+description: Make your token stand out with custom branding
+---
+
+# Customizing Your Token
+
+The web interface lets you fully customize your token's appearance. Here's how to make the most of each option.
+
+## Token Image
+
+Your token image appears everywhere—in trading lists, on your token page, and in social shares.
+
+### Image Requirements
+
+| Requirement | Specification |
+|-------------|--------------|
+| Format | PNG or JPG |
+| Maximum Size | 5 MB |
+| Recommended Size | 400x400 pixels |
+| Aspect Ratio | Square (1:1) |
+
+### Image Tips
+
+<Columns cols={2}>
+  <Card title="Keep it simple" icon="circle">
+    Simple, bold designs work better at small sizes in token lists.
+  </Card>
+  <Card title="Use high contrast" icon="sun">
+    Your image should be visible on both light and dark backgrounds.
+  </Card>
+  <Card title="Avoid text" icon="font">
+    Text becomes unreadable at thumbnail size. Use symbols instead.
+  </Card>
+  <Card title="Match your brand" icon="palette">
+    Consistent colors and style build recognition.
+  </Card>
+</Columns>
+
+### AI Image Generation
+
+Don't have a designer? Use the built-in AI generator:
+
+1. Enter your token name and description
+2. Click "Generate with AI"
+3. Wait a few seconds for the result
+4. Regenerate if needed, or upload your own
+
+<Info>
+AI-generated images are unique to your token and free to use commercially.
+</Info>
+
+## Token Name
+
+Your token's full name appears on trading pages and in search results.
+
+**Good names are:**
+- Memorable and unique
+- Easy to spell and pronounce
+- Related to your token's theme or community
+- 1-50 characters
+
+**Examples:**
+- "Moon Token" for $MOON
+- "Degen Mode" for $DEGEN
+- "Based Protocol" for $BASED
+
+## Token Symbol (Ticker)
+
+The ticker is how traders refer to your token.
+
+| Requirement | Details |
+|-------------|---------|
+| Length | 1-10 characters |
+| Characters | Letters and numbers only |
+| Case | Automatically uppercased |
+
+**Tips:**
+- Shorter is better (3-5 characters ideal)
+- Avoid special characters
+- Check that it's not already taken
+
+<Warning>
+Tickers are permanent and unique. Choose carefully—you can't change it later.
+</Warning>
+
+## Description
+
+Your description tells traders what your token is about.
+
+### What to Include
+
+- **Purpose**: Why does this token exist?
+- **Community**: Who is this for?
+- **Theme**: What's the vibe or story?
+- **Utility** (if any): What can holders do with it?
+
+### Example Descriptions
+
+<Tabs>
+  <Tab title="Memecoin">
+    ```
+    $MOON is for the believers. The ones who hold through the dips
+    and celebrate the pumps. Community-first, rug-proof, and ready
+    for liftoff.
+    ```
+  </Tab>
+  <Tab title="Community Token">
+    ```
+    The official token of the Based Builders community. Created by
+    builders, for builders. Join us in shipping great products on BNB Chain.
+    ```
+  </Tab>
+  <Tab title="Creator Token">
+    ```
+    Supporting my content creation journey. Holders get early access
+    to videos, exclusive Discord channels, and community votes on
+    future content.
+    ```
+  </Tab>
+</Tabs>
+
+### AI Description Generation
+
+Let AI write your description:
+
+1. Enter your token name
+2. Click "Generate Description"
+3. Edit the result to add your personal touch
+
+## Social Links
+
+Social links add credibility and help traders find your community.
+
+| Link Type | Best For |
+|-----------|----------|
+| **Website** | Projects with dedicated landing pages |
+| **Twitter/X** | Most tokens—great for updates and engagement |
+| **Telegram** | Community chat and announcements |
+
+### Link Validation
+
+Slinq validates all links before saving:
+- Must be valid URLs (https://)
+- Domain must be reachable
+- Special characters are handled automatically
+
+<Tip>
+Even if you don't have a website, add your Twitter. It's the easiest way for traders to verify you're real.
+</Tip>
+
+## Starting FDV
+
+Fully Diluted Valuation sets your token's initial market cap and price.
+
+### FDV Range
+
+| Setting | Range |
+|---------|-------|
+| Minimum | 50 BNB |
+| Maximum | 50,000 BNB |
+| Default | 500 BNB |
+
+### Choosing Your FDV
+
+<Columns cols={3}>
+  <Card title="Low FDV (50-200 BNB)" icon="seedling">
+    **Best for:** New creators, community experiments
+
+    **Pros:** Low entry, high growth potential
+
+    **Cons:** Less initial liquidity
+  </Card>
+  <Card title="Medium FDV (500-2,000 BNB)" icon="tree">
+    **Best for:** Most tokens
+
+    **Pros:** Balanced liquidity and growth
+
+    **Cons:** Middle ground
+  </Card>
+  <Card title="High FDV (5,000+ BNB)" icon="building">
+    **Best for:** Established creators, larger projects
+
+    **Pros:** Deep liquidity, premium positioning
+
+    **Cons:** Needs strong community to sustain
+  </Card>
+</Columns>
+
+### Price Calculation
+
+```
+Token Price = Starting FDV ÷ 100,000,000,000 (total supply)
+```
+
+| FDV | Token Price |
+|-----|-------------|
+| 50 BNB | 0.0000000005 BNB |
+| 500 BNB | 0.000000005 BNB |
+| 5,000 BNB | 0.00000005 BNB |
+| 50,000 BNB | 0.0000005 BNB |
+
+## Pre-Launch Checklist
+
+Before clicking "Launch":
+
+<Steps>
+  <Step title="Double-check your ticker">
+    Is it spelled correctly? Is it unique and memorable?
+  </Step>
+  <Step title="Review your image">
+    Does it look good at small sizes? Is it the right file?
+  </Step>
+  <Step title="Read your description">
+    Any typos? Does it explain your token clearly?
+  </Step>
+  <Step title="Verify social links">
+    Click each link to make sure they work.
+  </Step>
+  <Step title="Confirm FDV">
+    Is this the starting valuation you want?
+  </Step>
+</Steps>
+
+<Warning>
+All token parameters are permanent. Take your time—there's no rush.
+</Warning>
