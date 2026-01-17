@@ -78,7 +78,7 @@
       "anchors": [
         {
           "anchor": "Launch App",
-          "href": "https://slinq.xyz",
+          "href": "https://slinq.meme",
           "icon": "rocket"
         },
         {
@@ -103,7 +103,7 @@
     "primary": {
       "type": "button",
       "label": "Launch App",
-      "href": "https://slinq.xyz"
+      "href": "https://slinq.meme"
     }
   },
   "contextual": {

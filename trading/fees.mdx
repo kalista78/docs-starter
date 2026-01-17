@@ -5,7 +5,7 @@ description: Understanding fees and how they're distributed
 
 # Trading Fees Explained
 
-Every trade on Slinq includes a 1% fee. This fee is split between token creators and the platform.
+Every trade on Slinq includes a dynamic fee that starts at 1% but adjusts based on market conditions. This fee is split between token creators and the platform.
 
 ## Fee Breakdown
 
@@ -13,11 +13,46 @@ Every trade on Slinq includes a 1% fee. This fee is split between token creators
 |-----------|-------|----------------|
 | **Token Creator** | 40% | $0.40 |
 | **Slinq Protocol** | 60% | $0.60 |
-| **Total Fee** | 1% | $1.00 |
+| **Total Base Fee** | 1% | $1.00 |
 
 <Info>
 The 40% creator share is the highest in the industry. Most platforms give creators 0%.
 </Info>
+
+## Two Types of Fees
+
+Slinq has two separate fee mechanisms that work together:
+
+### 1. Hook Fees (Trading Fees)
+
+The **1% base fee** (plus any dynamic premiums) is the **hook fee** - this is distributed between stakeholders:
+
+| Recipient | Share | Purpose |
+|-----------|-------|---------|
+| **Token Creator/Beneficiary** | 40% | Rewards the token creator |
+| **Pool Initializer** | Variable | Rewards the launch executor |
+| **Slinq Protocol** | Remainder | Platform sustainability |
+
+<Info>
+Hook fees are what you see deducted from your trades. These go to people, not burns.
+</Info>
+
+### 2. LP Fees (Liquidity Provider Fees)
+
+Separately, PancakeSwap's native **LP fees** (0.3%) accrue to the locked liquidity position. Slinq uses these LP fees to create **deflationary pressure**:
+
+<CardGroup cols={2}>
+  <Card title="Token Side → Burned" icon="fire" color="#FF6B6B">
+    The token portion of LP fees is **permanently burned**, reducing the circulating supply of every token launched on Slinq. This makes all Slinq tokens naturally deflationary over time.
+  </Card>
+  <Card title="BNB Side → $SLINQ Buyback" icon="rotate" color="#4ECDC4">
+    The BNB portion of LP fees is used to **buy back and burn $SLINQ** on a regular basis, creating sustained deflationary pressure on the protocol token.
+  </Card>
+</CardGroup>
+
+<Tip>
+Every trade on Slinq contributes to deflation through LP fees - both for the token being traded AND for $SLINQ itself.
+</Tip>
 
 ## How Fees Work
 
@@ -25,8 +60,8 @@ The 40% creator share is the highest in the industry. Most platforms give creato
   <Step title="Trade executed">
     You buy or sell a token on Slinq.
   </Step>
-  <Step title="Fee collected">
-    1% of the trade value is collected by the smart contract.
+  <Step title="Dynamic fee calculated">
+    The smart contract calculates the fee based on MEV protection and volatility conditions.
   </Step>
   <Step title="Automatic split">
     The fee is split: 40% to creator, 60% to protocol.
@@ -41,15 +76,35 @@ The 40% creator share is the highest in the industry. Most platforms give creato
 
 ## MEV Protection Fees
 
-During the first 2 minutes after launch, additional fees protect against bots:
+During the first 2 minutes after launch, a premium is added to **buy orders only** to protect against sniper bots. The premium decays using a **parabolic (x²) curve**:
 
-| Time Window | Total Fee | Purpose |
-|-------------|-----------|---------|
-| 0-30 seconds | 10% | Maximum protection |
-| 30-60 seconds | ~7% | High protection |
-| 60-90 seconds | ~4% | Medium protection |
-| 90-120 seconds | ~2% | Light protection |
-| After 2 minutes | 1% | Standard fee |
+| Time After Launch | Buy Fee | Sell Fee |
+|-------------------|---------|----------|
+| 0 seconds | 6% | 1% |
+| 30 seconds | ~3.8% | 1% |
+| 60 seconds | ~2.25% | 1% |
+| 90 seconds | ~1.3% | 1% |
+| 120 seconds+ | 1% | 1% |
+
+### The Math Behind MEV Protection
+
+The MEV premium follows a parabolic decay formula:
+
+<Card title="MEV Premium Formula" icon="function">
+```
+mevPremium = 5% × (timeRemaining / 120)²
+
+totalBuyFee = baseFee + mevPremium
+           = 1% + 5% × (timeRemaining / 120)²
+```
+
+Where `timeRemaining` = 120 seconds - elapsed time since launch
+</Card>
+
+**Example calculations:**
+- At launch (t=0): `1% + 5% × (120/120)² = 1% + 5% = 6%`
+- At 60 seconds: `1% + 5% × (60/120)² = 1% + 1.25% = 2.25%`
+- At 90 seconds: `1% + 5% × (30/120)² = 1% + 0.31% = 1.31%`
 
 ### Why MEV Protection?
 
@@ -66,16 +121,49 @@ If you're not in a rush, waiting 2 minutes after launch means you pay standard 1
 
 ## Volatility Fees
 
-During periods of high price volatility, fees may increase slightly to protect liquidity providers. This is automatic and temporary.
+During periods of high price volatility, fees increase to protect liquidity providers. This uses a **Volatility Accumulator (VA)** that tracks price movements.
 
-| Volatility Level | Fee Adjustment |
-|------------------|----------------|
-| Normal | Standard 1% |
-| Elevated | 1-2% |
-| High | 2-3% |
+| Volatility Level | Fee Range | When It Triggers |
+|------------------|-----------|------------------|
+| **Normal** | 1% | Typical trading conditions |
+| **Elevated** | 1-3% | Moderate price swings |
+| **High** | 3-5% | Significant price movement |
+| **Extreme** | 5-8% | Rapid pumps or dumps |
+
+<Warning>
+The maximum total fee is capped at **8%** regardless of how volatile the market becomes.
+</Warning>
+
+### The Math Behind Volatility Fees
+
+Volatility fees use a **VA² (Volatility Accumulator Squared)** formula inspired by Meteora's DLMM:
+
+<Card title="Volatility Fee Formula" icon="function">
+```
+volatilityPremium = (N × VA²) / 1,000,000
+
+Where:
+- VA = Volatility Accumulator (tracks tick deviations)
+- N  = Fee Control Numerator (default: 40,000)
+
+totalFee = max(mevFee, baseFee + volatilityPremium)
+```
+
+The VA accumulates based on how far the price moves from a reference point, then decays over time.
+</Card>
+
+**How the VA works:**
+1. **Accumulation**: When price moves, VA increases by the tick deviation
+2. **Decay**: If no trades occur, VA decays by 50% after 60 seconds
+3. **Reset**: After 4 minutes of stability, VA resets to 0
+
+**Example calculations:**
+- VA = 500 (5% price move): `40,000 × 500² / 1,000,000 = 1% premium`
+- VA = 1000 (10% move): `40,000 × 1000² / 1,000,000 = 4% premium`
+- VA = 1500 (15% move): `40,000 × 1500² / 1,000,000 = 9%` → capped at 8%
 
 <Info>
-Volatility fees are rare and typically only trigger during extreme price movements.
+The VA² formula means small moves have minimal impact, but large rapid moves trigger significant protection for LPs.
 </Info>
 
 ## Comparing Fees
@@ -109,7 +197,7 @@ Gas fees go to BNB Chain validators, not Slinq. They vary based on network conge
 ## Fee FAQ
 
 <Accordion title="Do I pay fees on both buys and sells?">
-  Yes, the 1% fee applies to every trade in both directions.
+  Yes, the base 1% fee applies to every trade. However, the MEV premium (during the first 2 minutes) only applies to **buy orders** - sells always pay the standard fee.
 </Accordion>
 
 <Accordion title="Are fees included in the quote?">
@@ -117,7 +205,11 @@ Gas fees go to BNB Chain validators, not Slinq. They vary based on network conge
 </Accordion>
 
 <Accordion title="Can I avoid MEV fees?">
-  Wait 2 minutes after launch to pay standard 1% fees. The MEV decay is automatic.
+  Wait 2 minutes after launch to pay standard 1% fees. The MEV decay is automatic. Or sell instead of buy - MEV fees only apply to buys.
+</Accordion>
+
+<Accordion title="What's the maximum fee I could ever pay?">
+  The absolute maximum is **8%**, which only happens during extreme volatility (rapid pumps/dumps). Under normal conditions, you'll pay 1-2%.
 </Accordion>
 
 <Accordion title="Where can I see my fee contributions?">
@@ -131,19 +223,29 @@ Gas fees go to BNB Chain validators, not Slinq. They vary based on network conge
   Visit your creator dashboard and click "Claim" to withdraw accumulated fees.
 </Accordion>
 
+<Accordion title="How does the token burn work?">
+  This applies to **LP fees** (PancakeSwap's 0.3%), not hook fees. LP fees accumulate in both the token and BNB. The **token side is burned** directly, reducing supply. The **BNB side** funds regular $SLINQ buybacks and burns. Every trade makes tokens more scarce.
+</Accordion>
+
+<Accordion title="What's the difference between hook fees and LP fees?">
+  **Hook fees** (1%+) go to creators, pool initializers, and the protocol - these are the fees you see in your trade quotes. **LP fees** (0.3%) are PancakeSwap's native fees that accrue to liquidity - Slinq uses these for token burns and $SLINQ buybacks.
+</Accordion>
+
 ## Why This Fee Structure?
 
 Slinq's fee model aligns incentives:
 
 <Columns cols={2}>
   <Card title="For Traders" icon="user">
-    - Transparent 1% fee
-    - MEV protection at launch
-    - Supporting creators you believe in
+    - Transparent 1% base fee
+    - MEV protection at launch (buy-only premium)
+    - Volatility fees protect against manipulation
+    - Max 8% cap even in extreme conditions
   </Card>
   <Card title="For Creators" icon="star">
-    - 40% of all trading volume
+    - 40% of all trading fees
     - Passive income from every trade
+    - Higher fees during volatility = more earnings
     - Incentive to build community
   </Card>
 </Columns>
