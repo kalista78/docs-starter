@@ -8,87 +8,78 @@
     "dark": "#EAB308"
   },
   "favicon": "/favicon.svg",
-  "navigation": {
-    "tabs": [
-      {
-        "tab": "Documentation",
-        "groups": [
-          {
-            "group": "Getting Started",
-            "icon": "rocket",
-            "pages": [
-              "index",
-              "quickstart",
-              "supported-wallets"
-            ]
-          },
-          {
-            "group": "Create Tokens",
-            "icon": "sparkles",
-            "pages": [
-              "create/overview",
-              "create/twitter",
-              "create/farcaster",
-              "create/web",
-              "create/customization"
-            ]
-          },
-          {
-            "group": "Trading",
-            "icon": "chart-line",
-            "pages": [
-              "trading/overview",
-              "trading/buying",
-              "trading/selling",
-              "trading/fees"
-            ]
-          },
-          {
-            "group": "Creator Rewards",
-            "icon": "coins",
-            "pages": [
-              "rewards/overview",
-              "rewards/earning-fees",
-              "rewards/claiming"
-            ]
-          },
-          {
-            "group": "Season Pass",
-            "icon": "trophy",
-            "pages": [
-              "season/overview",
-              "season/earning-points",
-              "season/leaderboard",
-              "season/referrals"
-            ]
-          },
-          {
-            "group": "Resources",
-            "icon": "book",
-            "pages": [
-              "faq",
-              "glossary",
-              "security"
-            ]
-          }
-        ]
-      }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Launch App",
-          "href": "https://slinq.meme",
-          "icon": "rocket"
-        },
-        {
-          "anchor": "Twitter",
-          "href": "https://x.com/Slinqfun",
-          "icon": "x-twitter"
-        }
+  "navigation": [
+    {
+      "group": "Getting Started",
+      "icon": "rocket",
+      "pages": [
+        "index",
+        "quickstart",
+        "supported-wallets"
+      ]
+    },
+    {
+      "group": "Create Tokens",
+      "icon": "sparkles",
+      "pages": [
+        "create/overview",
+        "create/twitter",
+        "create/farcaster",
+        "create/web",
+        "create/customization"
+      ]
+    },
+    {
+      "group": "Trading",
+      "icon": "chart-line",
+      "pages": [
+        "trading/overview",
+        "trading/buying",
+        "trading/selling",
+        "trading/fees"
+      ]
+    },
+    {
+      "group": "Creator Rewards",
+      "icon": "coins",
+      "pages": [
+        "rewards/overview",
+        "rewards/earning-fees",
+        "rewards/claiming"
+      ]
+    },
+    {
+      "group": "Season Pass",
+      "icon": "trophy",
+      "pages": [
+        "season/overview",
+        "season/earning-points",
+        "season/leaderboard",
+        "season/referrals"
+      ]
+    },
+    {
+      "group": "Resources",
+      "icon": "book",
+      "pages": [
+        "faq",
+        "glossary",
+        "security"
       ]
     }
-  },
+  ],
+  "anchors": [
+    {
+      "name": "Launch App",
+      "url": "https://slinq.meme",
+      "icon": "rocket"
+    },
+    {
+      "name": "Twitter",
+      "url": "https://x.com/Slinqfun",
+      "icon": "x-twitter"
+    }
+  ],
   "logo": {
     "light": "/logo/light.svg",
     "dark": "/logo/dark.svg",
