@@ -11,77 +11,82 @@
   "logo": {
     "light": "/logo/light.svg",
     "dark": "/logo/dark.svg",
-    "height": 66,
+    "height": 80,
     "href": "https://slinq.meme"
   },
   "navigation": {
     "languages": [
       {
         "language": "en",
-        "groups": [
+        "tabs": [
           {
-            "group": "Getting Started",
-            "icon": "rocket",
-            "pages": [
-              "index",
-              "quickstart",
-              "supported-wallets"
-            ]
-          },
-          {
-            "group": "Create Tokens",
-            "icon": "sparkles",
-            "pages": [
-              "create/overview",
-              "create/twitter",
-              "create/farcaster",
-              "create/web",
-              "create/customization"
-            ]
-          },
-          {
-            "group": "Trading",
-            "icon": "chart-line",
-            "pages": [
-              "trading/overview",
-              "trading/buying",
-              "trading/selling",
-              "trading/fees"
-            ]
-          },
-          {
-            "group": "Creator Rewards",
-            "icon": "coins",
-            "pages": [
-              "rewards/overview",
-              "rewards/earning-fees",
-              "rewards/claiming"
-            ]
-          },
-          {
-            "group": "Season Pass",
-            "icon": "trophy",
-            "pages": [
-              "season/overview",
-              "season/earning-points",
-              "season/leaderboard",
-              "season/referrals"
-            ]
-          },
-          {
-            "group": "$SLINQ Token",
-            "icon": "coins",
-            "pages": [
-              "token/tokenomics"
-            ]
-          },
-          {
-            "group": "Resources",
-            "icon": "book",
-            "pages": [
-              "faq",
-              "glossary",
-              "security"
+            "tab": "Documentation",
+            "groups": [
+              {
+                "group": "Getting Started",
+                "icon": "rocket",
+                "pages": [
+                  "index",
+                  "quickstart",
+                  "supported-wallets"
+                ]
+              },
+              {
+                "group": "Create Tokens",
+                "icon": "sparkles",
+                "pages": [
+                  "create/overview",
+                  "create/twitter",
+                  "create/farcaster",
+                  "create/web",
+                  "create/customization"
+                ]
+              },
+              {
+                "group": "Trading",
+                "icon": "chart-line",
+                "pages": [
+                  "trading/overview",
+                  "trading/buying",
+                  "trading/selling",
+                  "trading/fees"
+                ]
+              },
+              {
+                "group": "Creator Rewards",
+                "icon": "coins",
+                "pages": [
+                  "rewards/overview",
+                  "rewards/earning-fees",
+                  "rewards/claiming"
+                ]
+              },
+              {
+                "group": "Season Pass",
+                "icon": "trophy",
+                "pages": [
+                  "season/overview",
+                  "season/earning-points",
+                  "season/leaderboard",
+                  "season/referrals"
+                ]
+              },
+              {
+                "group": "$SLINQ Token",
+                "icon": "coins",
+                "pages": [
+                  "token/tokenomics"
+                ]
+              },
+              {
+                "group": "Resources",
+                "icon": "book",
+                "pages": [
+                  "faq",
+                  "glossary",
+                  "security"
+                ]
+              }
             ]
           }
         ],
