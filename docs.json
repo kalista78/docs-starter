@@ -59,6 +59,13 @@
       ]
     },
     {
+      "group": "$SLINQ Token",
+      "icon": "coins",
+      "pages": [
+        "token/tokenomics"
+      ]
+    },
+    {
       "group": "Resources",
       "icon": "book",
       "pages": [
